@@ -1,0 +1,20 @@
+:root {
+    --brand-primary: #3B82F6;
+    --brand-accent: #3B82F6;
+    --brand-neutral: #F8FAFC;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Hide the default `<details>` marker so our custom chevron is the only affordance. */
+summary::-webkit-details-marker { display: none; }
+summary::marker { content: ''; }
+
+/* Subtle entrance animation for sections as they scroll in. */
+@media (prefers-reduced-motion: no-preference) {
+    section { animation: founder-fade-in .6s ease-out both; }
+    @keyframes founder-fade-in {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
